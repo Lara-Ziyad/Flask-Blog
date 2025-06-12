@@ -4,23 +4,6 @@
         "author": "John Doe",
         "title": "First Post",
         "content": "This is my first post."
-    },
-    {
-        "id": 2,
-        "author": "Simon Klaus",
-        "title": "Second Post",
-        "content": "This is another post."
-    },
-    {
-        "id": 4,
-        "author": "Lara Kamper",
-        "title": "Free Gaza",
-        "content": "From the river to the see palestine will be free"
-    },
-    {
-        "id": 6,
-        "author": "John Doe",
-        "title": "First Post",
-        "content": "This is my first post."
     }
-]
+
+].

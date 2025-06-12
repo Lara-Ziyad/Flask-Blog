@@ -1,12 +1,101 @@
+/* Center the content and limit its width */
+.container {
+    max-width: 800px;  /* adjust this to be narrower or wider */
+    margin: 0 auto;    /* center horizontally */
+    padding: 20px;
+}
+
+/* Set up the page with a soft pastel background */
 body {
-    background-color: #f0f0f0;
     font-family: Arial, sans-serif;
+    background-color: f5f5f5;
+ deep gray text */
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
 }
 
+/* Style the main heading */
 h1 {
-    color: #333366;
+    color: #44475a; /* soft purple for a modern accent */
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 3em;
+    letter-spacing: 1px;
 }
 
+h2 {
+    color: #44475a;
+   }
+
+/* Style paragraphs */
 p {
-    color: #444444;
+    color: #555555;
+    font-size: 1.1em;
+    max-width: 700px;
+    margin: 0 auto 20px auto;
+    line-height: 1.8;
 }
+
+.post {
+    background-color: #ffffff; /* white card background */
+    border: 2px solid #e0e0e0; /* soft border */
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05)
+}
+
+/* Style the hr (divider) */
+hr {
+    border: none;
+    border-top: 2px solid #f0f0f0;
+    margin: 30px 0;
+}
+
+/* General button style */
+button, .button-link {
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: 14px;
+    text-decoration: none;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    color: #000;
+}
+
+/* Gray button (Add) */
+.button-gray {
+    background-color: #707388;
+    color: f5f5f5;
+}
+
+.button-gray:hover {
+    background-color: #8c8fa3;
+}
+
+.button-center {
+    text-align: center  ;
+}
+
+/* Red button(Delete) */
+.button-red {
+    background-color: #e8a1a1;
+    color: #000;
+}
+
+.button-red:hover {
+    background-color: #d88c8c;
+}
+
+/* Yellow button (Update) */
+.button-yellow {
+    background-color: #ffcb77;
+    color: #000;
+}
+
+.button-yellow:hover {
+    background-color: #f0ba68;
+}
+
