@@ -9,6 +9,16 @@ def load_posts():
         posts = json.load(file)
     return posts
 
+
+# Helper: fetch post by ID
+def fetch_post_by_id(post_id):
+    blog_posts = load_posts()
+    for post in blog_posts:
+        if post['id'] == post_id:
+            return post
+    return None
+
+
 @app.route('/')
 def index():
     blog_posts = load_posts()
@@ -68,6 +78,39 @@ def delete(post_id):
     # Redirect to home page
     return redirect(url_for('index'))
 
+@app.route('/update/<int:post_id>', methods=['GET', 'POST'])
+def update(post_id):
+    # Fetch all posts
+    blog_posts = load_posts()
+
+    # Find the post to update
+    post = fetch_post_by_id(post_id)
+    if post is None:
+        return "Post not found", 404
+
+    if request.method == 'POST':
+        # Get updated data from form
+        updated_author = request.form.get('author')
+        updated_title = request.form.get('title')
+        updated_content = request.form.get('content')
+
+        # Update the post fields
+        for p in blog_posts:
+            if p['id'] == post_id:
+                p['author'] = updated_author
+                p['title'] = updated_title
+                p['content'] = updated_content
+                break
+
+        # Save updated posts back to JSON
+        with open('data.json', 'w') as file:
+            json.dump(blog_posts, file, indent=4)
+
+        # Redirect to home
+        return redirect(url_for('index'))
+
+    # GET → show form pre-filled with post data
+    return render_template('update.html', post=post)
 
 
 if __name__ == '__main__':
