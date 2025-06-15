@@ -4,6 +4,19 @@
         "author": "John Doe",
         "title": "First Post",
         "content": "This is my first post."
+    },
+    {
+        "id": 2,
+        "author": "John Doe",
+        "title": "Second Post",
+        "content": "This is my Second Post."
+    },
+    {
+        "id": 3,
+        "author": "John Doe",
+        "title": "Third Post",
+        "content": "This is my Third Post."
     }
 
-].
+
+]
