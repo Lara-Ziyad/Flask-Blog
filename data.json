@@ -13,10 +13,8 @@
     },
     {
         "id": 3,
-        "author": "John Doe",
+        "author": "John ",
         "title": "Third Post",
-        "content": "This is my Third Post."
+        "content": "This is my 3rd Post."
     }
-
-
 ]
