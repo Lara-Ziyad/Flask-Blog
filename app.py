@@ -31,9 +31,12 @@ from flask import request, redirect, url_for, render_template
 def add():
     if request.method == 'POST':
         # Get form data
-        author = request.form.get('author')
-        title = request.form.get('title')
-        content = request.form.get('content')
+        author = request.form.get('author').strip()
+        title = request.form.get('title').strip()
+        content = request.form.get('content').strip()
+
+        if not author or not title or not content:
+            return "All fields are required and must not be blank.", 400
 
         # Load current posts
         blog_posts = load_posts()
@@ -90,9 +93,12 @@ def update(post_id):
 
     if request.method == 'POST':
         # Get updated data from form
-        updated_author = request.form.get('author')
-        updated_title = request.form.get('title')
-        updated_content = request.form.get('content')
+        updated_author = request.form.get('author').strip()
+        updated_title = request.form.get('title').strip()
+        updated_content = request.form.get('content').strip()
+
+        if not updated_author or not updated_title or not updated_content:
+            return "All fields are required and must not be blank.", 400
 
         # Update the post fields
         for p in blog_posts:
